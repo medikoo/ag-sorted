@@ -10,7 +10,7 @@ var aFrom          = require('es5-ext/array/from')
   , isHeadingArg = RegExp.prototype.test.bind(/^-(?:H|-(?:no)?heading)$/);
 
 module.exports = function (args) {
-	var ag, def, map, currentName, currentData, init, cont;
+	var ag, def, map, currentName, currentData, init, cont, brokenLine;
 	args = (args == null) ? [] : aFrom(ensureIterable(args));
 
 	// Force default colors and headings (if not instructed otherwise)
@@ -46,6 +46,8 @@ module.exports = function (args) {
 
 	ag.stdout.on('data', function (data) {
 		data = String(data).split('\n');
+		if (brokenLine) data[0] = brokenLine + data[0];
+		brokenLine = data.pop();
 		if (!currentData) init(data);
 		else cont(data);
 	});
@@ -56,6 +58,10 @@ module.exports = function (args) {
 
 	ag.on('close', function () {
 		var result = [];
+		if (brokenLine) {
+			if (!currentData) init([brokenLine]);
+			else cont([brokenLine]);
+		}
 		if (currentData) {
 			map[currentName] = currentData.join('\n');
 			currentData = null;
