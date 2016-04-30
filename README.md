@@ -5,7 +5,7 @@ Temporary solution for lack of [--sort-files](https://github.com/ggreer/the_silv
 
 ### Installation
 
-Ensure that [ag](https://github.com/ggreer/the_silver_searcher) is installed for your system, and then:
+Ensure that [Node.js](https://nodejs.org/) and [ag](https://github.com/ggreer/the_silver_searcher) are installed in your system, then do:
 
 	$ npm install -g ag-sorted
 
