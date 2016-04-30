@@ -8,6 +8,9 @@
     "ack",
     "ag"
   ],
+  "bin": {
+    "ag-sorted": "./bin/ag-sorted"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/medikoo/ag-sorted.git"
