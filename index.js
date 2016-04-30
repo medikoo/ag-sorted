@@ -57,7 +57,7 @@ module.exports = function (args) {
 	ag.on('close', function () {
 		var result = [];
 		if (currentData) {
-			result[currentName] = currentData.join('\n');
+			map[currentName] = currentData.join('\n');
 			currentData = null;
 		}
 		// Sort per filename
