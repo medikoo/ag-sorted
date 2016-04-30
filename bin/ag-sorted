@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+Error.stackTraceLimit = Infinity;
+
+var promise = require('../index')(process.argv.slice(2));
+
+// Output eventual err data immediatelly
+promise.on('err', function (data) { process.stderr.write(data); });
+
+promise.done(function (sortedData) {
+	// Output sorted output
+	process.stdout.write(sortedData);
+});

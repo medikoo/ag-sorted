@@ -1,0 +1,28 @@
+{
+  "name": "ag-sorted",
+  "version": "1.0.0",
+  "description": "Sort 'ag' output by filenames alphabetically",
+  "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+  "keywords": [
+    "grep",
+    "ack",
+    "ag"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/ag-sorted.git"
+  },
+  "dependencies": {
+    "es5-ext": "^0.10.11",
+    "deferred": "^0.7.5"
+  },
+  "devDependencies": {
+    "xlint": "^0.2.2",
+    "xlint-jslint-medikoo": "^0.1.4"
+  },
+  "scripts": {
+    "lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
+    "lint-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch"
+  },
+  "license": "MIT"
+}

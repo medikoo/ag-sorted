@@ -1,0 +1,10 @@
+sudo: false # http://docs.travis-ci.com/user/workers/container-based-infrastructure/
+language: node_js
+node_js:
+  - 6
+
+notifications:
+  email:
+    - medikoo+ag-sorted@medikoo.com
+
+script: "npm run lint"
