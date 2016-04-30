@@ -1,7 +1,7 @@
 # ag-sorted
 ## Sort [ag](https://github.com/ggreer/the_silver_searcher) output by filenames alphabetically
 
-Temporary solution for lack of [--sort-files](https://github.com/ggreer/the_silver_searcher/issues/1) option
+Temporary solution for lack of [--sort-files](https://github.com/ggreer/the_silver_searcher/issues/107) option
 
 ### Installation
 
